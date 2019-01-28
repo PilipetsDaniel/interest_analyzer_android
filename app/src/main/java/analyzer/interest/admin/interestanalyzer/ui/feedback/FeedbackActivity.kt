@@ -19,7 +19,7 @@ class FeedbackActivity : BaseActivity(), FeedbackContract.View {
     }
 
     override fun showResponseOk() {
-        toast("Комментарий отправлен")
+        toast(getString(R.string.comment_sent))
         onBackPressed()
     }
 
@@ -30,7 +30,7 @@ class FeedbackActivity : BaseActivity(), FeedbackContract.View {
     private fun initButtonListener() {
         button_send_feedback.setOnClickListener {
             if (et_feedback.text.toString().isEmpty()) {
-                til_feedback.error = "Комментарий пуст"
+                til_feedback.error = getString(R.string.field_is_empty)
             } else {
                 til_feedback.error = null
                 presenter.sendFeedback(et_feedback.text.toString())

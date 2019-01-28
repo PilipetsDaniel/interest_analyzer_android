@@ -36,6 +36,9 @@
             android:name=".ui.auth.registration.RegistrationActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".ui.auth.wait.ConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait" />
         <activity

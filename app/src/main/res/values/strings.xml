@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">InterestAnalyzer</string>
+    <string name="app_name">Interest analyzer</string>
+    <string name="login">Login</string>
+    <string name="registration">Registration</string>
+    <string name="enter_password">Enter password</string>
+    <string name="enter_last_name">Enter last name</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_email">Enter email</string>
+    <string name="field_is_empty">Field is empty</string>
+    <string name="submit_statement">Submit statement</string>
+    <string name="wait_for_server">Wait for server confirmation</string>
+    <string name="comment_sent">Comment sent</string>
 </resources>

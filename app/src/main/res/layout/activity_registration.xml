@@ -15,7 +15,7 @@
             android:id="@+id/et_firstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Введите фамилию"
+            android:hint="@string/enter_last_name"
             android:singleLine="true" />
 
     </android.support.design.widget.TextInputLayout>
@@ -32,7 +32,7 @@
             android:id="@+id/et_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Введите имя"
+            android:hint="@string/enter_your_name"
             android:singleLine="true" />
 
     </android.support.design.widget.TextInputLayout>
@@ -49,7 +49,7 @@
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Введите email"
+            android:hint="@string/enter_email"
             android:singleLine="true" />
 
     </android.support.design.widget.TextInputLayout>
@@ -58,7 +58,7 @@
         android:id="@+id/button_registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Отправить заявку"
+        android:text="@string/submit_statement"
         app:layout_constraintTop_toBottomOf="@+id/til_email" />
 
 </android.support.constraint.ConstraintLayout>

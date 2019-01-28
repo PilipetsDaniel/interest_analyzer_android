@@ -9,7 +9,7 @@ class FeedbackPresenterImpl(var view: FeedbackContract.View?) : FeedbackContract
             view?.showResponseOk()
         } else {
             serverOk = true
-            view?.showResponseError("Комментарий слишком мал")
+            view?.showResponseError("")
         }
     }
 

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Аналізатор інтересів</string>
+    <string name="login">Вхід</string>
+    <string name="registration">Реєстрації</string>
+    <string name="enter_password">Введіть пароль</string>
+    <string name="enter_last_name">Введіть прізвище</string>
+    <string name="enter_your_name">Введіть ім\'я</string>
+    <string name="enter_email">Введіть email</string>
+    <string name="field_is_empty">Поле порожнє</string>
+    <string name="submit_statement">Надіслати заяву</string>
+    <string name="wait_for_server">Чекайте підтвердження на сервері</string>
+    <string name="comment_sent">Коментар відправлений</string>
+</resources>

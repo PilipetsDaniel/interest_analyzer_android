@@ -22,4 +22,14 @@ object SPUtil {
         App.instance.getSharedPreferences(PreferenceName, Context.MODE_PRIVATE)
                 .edit().putString(Constants.KEY_USER_MODEL, gson.toJson(user)).apply()
     }
+
+    fun getStatusRegistration(): Boolean {
+        return App.instance.getSharedPreferences(PreferenceName, Context.MODE_PRIVATE)
+                .getBoolean(Constants.KEY_STATUS_REGISTRATION, false)
+    }
+
+    fun saveStatusRegistration() {
+        App.instance.getSharedPreferences(PreferenceName, Context.MODE_PRIVATE)
+                .edit().putBoolean(Constants.KEY_STATUS_REGISTRATION, true).apply()
+    }
 }

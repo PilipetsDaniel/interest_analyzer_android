@@ -2,6 +2,7 @@ package analyzer.interest.admin.interestanalyzer.ui.splash
 
 import analyzer.interest.admin.interestanalyzer.R
 import analyzer.interest.admin.interestanalyzer.ui.auth.LoginOrRegistrationActivity
+import analyzer.interest.admin.interestanalyzer.ui.auth.wait.ConfirmationActivity
 import analyzer.interest.admin.interestanalyzer.ui.main.MainActivity
 import analyzer.interest.admin.interestanalyzer.util.SPUtil
 import android.os.Bundle
@@ -20,7 +21,11 @@ class SplashActivity : AppCompatActivity() {
         if (SPUtil.getUserModel() != null) {
             startActivity<MainActivity>()
         } else {
-            startActivity<LoginOrRegistrationActivity>()
+            if (SPUtil.getStatusRegistration()) {
+                startActivity<ConfirmationActivity>()
+            } else {
+                startActivity<LoginOrRegistrationActivity>()
+            }
         }
         finish()
     }

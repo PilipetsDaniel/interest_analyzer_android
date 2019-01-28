@@ -31,7 +31,7 @@ class LoginActivity : BaseActivity(), LoginContract.View {
     private fun initButtonListener() {
         button_login.setOnClickListener {
             if (et_password.text.toString().isEmpty()) {
-                til_password.error = "Комментарий пуст"
+                til_password.error = getString(R.string.field_is_empty)
             } else {
                 til_password.error = null
                 presenter.login(et_password.text.toString())

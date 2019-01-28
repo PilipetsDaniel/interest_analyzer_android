@@ -10,13 +10,13 @@
         android:id="@+id/button_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Логин" />
+        android:text="@string/login" />
 
     <Button
         android:id="@+id/button_registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Регистрация"
+        android:text="@string/registration"
         app:layout_constraintTop_toBottomOf="@+id/button_login" />
 
 </android.support.constraint.ConstraintLayout>

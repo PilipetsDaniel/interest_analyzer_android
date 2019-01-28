@@ -1,9 +1,10 @@
 package analyzer.interest.admin.interestanalyzer.ui.auth.registration
 
 import analyzer.interest.admin.interestanalyzer.R
+import analyzer.interest.admin.interestanalyzer.ui.auth.wait.ConfirmationActivity
 import analyzer.interest.admin.interestanalyzer.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_registration.*
-import org.jetbrains.anko.longToast
+import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 
 class RegistrationActivity : BaseActivity(), RegistrationContract.View {
@@ -20,8 +21,8 @@ class RegistrationActivity : BaseActivity(), RegistrationContract.View {
     }
 
     override fun showResponseOk() {
-        longToast("Заявка отправлена, ожидайте")
-        onBackPressed()
+        startActivity<ConfirmationActivity>()
+        finishAffinity()
     }
 
     override fun showResponseError(text: String) {
@@ -44,20 +45,25 @@ class RegistrationActivity : BaseActivity(), RegistrationContract.View {
     }
 
     private fun check(): Boolean {
-        if (et_firstName.text.toString().isEmpty()) {
-            til_firstName.error = "Поле пустое"
-            return false
-        } else if (et_name.text.toString().isEmpty()) {
-            til_name.error = "Поле пустое"
-            return false
-        } else if (et_email.text.toString().isEmpty()) {
-            til_email.error = "Поле пустое"
-            return false
-        } else {
-            til_firstName.error = null
-            til_name.error = null
-            til_email.error = null
-            return true
+        when {
+            et_firstName.text.toString().isEmpty() -> {
+                til_firstName.error = getString(R.string.field_is_empty)
+                return false
+            }
+            et_name.text.toString().isEmpty() -> {
+                til_name.error = getString(R.string.field_is_empty)
+                return false
+            }
+            et_email.text.toString().isEmpty() -> {
+                til_email.error = getString(R.string.field_is_empty)
+                return false
+            }
+            else -> {
+                til_firstName.error = null
+                til_name.error = null
+                til_email.error = null
+                return true
+            }
         }
     }
 }
